@@ -1,5 +1,5 @@
 import 'package:feed_parser/util/helpers.dart';
-import 'package:xml/xml.dart';:wq
+import 'package:xml/xml.dart';
 
 class Item {
   final String title;
@@ -14,7 +14,7 @@ class Item {
     var title = xmlGetString(element, 'title');
     var description = xmlGetString(element, 'description');
     var link = xmlGetString(element, 'link');
-    var guid = xmlGetString(element, 'pubDate', strict: false);
+    var guid = xmlGetString(element, 'guid', strict: false);
     var pubDate = xmlGetString(element, 'pubDate');
 
     return new Item(title, description, link, guid: guid, pubDate: pubDate);
